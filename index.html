@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<head>
+  <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+ </head>
+<title>demaxi</title>
+<style>
+
+body {
+  background: url(background.png) center center fixed;
+  background-size: cover;
+  background: #466368;
+  background: -webkit-linear-gradient(#648880, #293f50);
+  background:    -moz-linear-gradient(#648880, #293f50);
+  background:         linear-gradient(#648880, #293f50);
+}
+
+@font-face {
+	font-family: "TildaSans-Regular"; 
+	src: url("TildaSans-Regular.ttf") format("truetype"); 
+	font-style: normal; 
+	font-weight: normal; 
+  } 
+
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.loader::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #000000;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+ 
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    pointer-events: none;
+}
+
+  .button {
+   position: relative;
+   padding: 15px 30px;
+   display: inline-block;
+   color: #2196f3;
+   text-transform: uppercase;
+   text-decoration: none;
+   font-size: 24px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   letter-spacing: 4px;
+   overflow: hidden;
+   transition: 0,2s;
+   position: relative;
+   left: 50%;
+   transform: translate(-50%, 0); 
+  }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-family: TildaSans-Regular
+}
+
+p {
+text-align: center;
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-bottom: 20px;
+  background: url(channel.png) center center no-repeat;
+  background-size: cover;
+  position:absolute
+}
+
+.circle-image{
+	  display: inline-block;
+	  border-radius: 50%;
+	  overflow: hidden;
+	  width: 200px;
+	  height: 200px;
+	}
+	.circle-image img{
+	  width:100%;
+	  height:100%;
+	  object-fit: cover;
+	}
+
+   
+
+.myElement {
+
+margin: 150px;
+
+}
+
+.nickname {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.center-text {
+  text-align: center;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+p {
+
+letter-spacing: -1px;
+
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+  <p class="myElement"></p>
+  <div style="top: 50%;left:700px;">
+  <span class="circle-image">
+    <img src="channel.png"/>
+   </span>
+  </div>
+  <div class="nickname">demaxi</div>
+  <div class="description">youtuber, cybersportsman, playing in Counter-Strike 2 team "psychokids" as rifler, support. favorite CS2 Team: "G2 Esports" </div>
+  <div class="description">Semifinalist of CyberX CS:GO 1x1 tournament on 19.08.23, member of PGL CS2 Major Copenhagen 2024 EU Open Qualifer   </div>
+  <div class="buttons">
+ 
+    <a href="https://www.youtube.com/c/@DeMaxi" target="_blank">
+      <p style="text-align: center"></p>
+      <button class="glow-on-hover" type="button">youtube</button>
+   </a>
+
+   <a href="https://twitch.tv/demaxi1337" target="_blank">
+    <p style="text-align: center"></p>
+    <button class="glow-on-hover" type="button">twitch</button>
+ </a>
+
+ <a href="https://t.me/demaxi1338" target="_blank">
+  <p style="text-align: center"></p>
+  <button class="glow-on-hover" type="button">telegram</button>
+</a>
+
+<a href="https://www.tiktok.com/@demaxi.cs2" target="_blank">
+  <p style="text-align: center"></p>
+  <button class="glow-on-hover" type="button">tiktok</button>
+</a>
+
+<a href="https://www.faceit.com/ru/players/DeMaxi1337" target="_blank">
+  <p style="text-align: center"></p>
+  <button class="glow-on-hover" type="button">faceit</button>
+</a>
+
+<a href="https://www.donationalerts.com/r/demaxi1337" target="_blank">
+  <p style="text-align: center"></p>
+  <button class="glow-on-hover" type="button">donationalerts</button>
+
+<a href="https://www.challengermode.com/users/03be7441-31fc-43e0-96ce-cd7c31e05dc5" target="_blank">
+  <p style="text-align: center"></p>
+  <button class="glow-on-hover" type="button">challengermode</button>
+</a>
+
+  <a href="https://cs2.fastcup.net/id2074004" target="_blank">
+    <p style="text-align: center"></p>
+    <button class="glow-on-hover" type="button">fastcup</button>
+
+ </a>
+
+</a>
+    <div style="width: 200px;">
+      <div style="height: 100px;">
+      </div>
+      <div style="width: 250px;">
+      <div style="height: 50px;">
+      <p style="text-align: center"></p><h4>for any questions, dm me in: </h4>
+        <p style="text-align: center"></p><h5>discord: demaxi</h5>
+      <p style="text-align: center"></p><h5>telegram: @demaxi1337</h5>
+  </div>
+</div>
+</body>
+</html>
